@@ -1,10 +1,11 @@
 from flask import Flask,render_template,request
 import pickle
+import joblib
 
 filename = 'model_moviewreview.pkl'
 classifier = pickle.load(open(filename, 'rb'))
 filename1 = 'cv-transform.pkl'
-cv = pickle.load(open(filename1, 'rb'))
+cv = joblib.load(filename1)
 
 app = Flask(__name__)
 
