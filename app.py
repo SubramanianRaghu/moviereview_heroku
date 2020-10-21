@@ -1,6 +1,5 @@
 from flask import Flask,render_template,request
 import pickle
-import joblib
 
 filename = 'model_moviewreview.pkl'
 classifier = pickle.load(open(filename, 'rb'))
