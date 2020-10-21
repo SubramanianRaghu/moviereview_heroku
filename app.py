@@ -5,7 +5,7 @@ import joblib
 filename = 'model_moviewreview.pkl'
 classifier = pickle.load(open(filename, 'rb'))
 filename1 = 'cv-transform.pkl'
-cv = joblib.load(filename1)
+cv = pickle.load(open(filename1, 'rb'))
 
 app = Flask(__name__)
 
