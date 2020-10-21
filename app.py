@@ -4,7 +4,7 @@ import pickle
 filename = 'model_moviewreview.pkl'
 classifier = pickle.load(open(filename, 'rb'))
 with open('cv-transform.pkl','rb') as fin:
-cv = pickle.load(fin)
+    cv = pickle.load(fin)
 
 app = Flask(__name__)
 
