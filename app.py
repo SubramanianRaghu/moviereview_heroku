@@ -1,9 +1,9 @@
 from flask import Flask,render_template,request
-import joblib
+import pickle
 
-filename = 'classifier_model.sav'
-classifier = joblib.load(filename)
-cv = joblib.load("countvector.sav")
+filename = 'model_moviewreview.pkl'
+classifier = pickle.load(open(filename, 'rb'))
+cv = pickle.load(open('cv-transform.pkl','rb'))
 
 app = Flask(__name__)
 
